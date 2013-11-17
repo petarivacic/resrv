@@ -60,7 +60,7 @@ class TestsController < ApplicationController
 
     respond_to do |format|
       if @test.update_attributes(params[:test])
-        format.html { redirect_to @test, notice: 'Test was successfully updated.' }
+        format.html { redirect_to @test, notice: 'Restaura was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
