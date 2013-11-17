@@ -1,17 +1,9 @@
 Resrv::Application.routes.draw do
-  get "restaurants/index"
+  resources :tests
 
-  get "restaurants/new"
 
-  get "restaurants/create"
-
-  get "restaurants/show"
-
-  get "restaurants/edit"
-
-  get "restaurants/update"
-
-  get "restaurants/destroy"
+  root :to => 'restaurants#index'
+  resources :restaurants
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
