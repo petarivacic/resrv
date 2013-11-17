@@ -1,0 +1,18 @@
+/ %section#add-new-restaurant
+/ 	= link_to 'add new restaurant', new_restaurant_path, class: ''
+
+/ %section#restaurants
+/   - @restaurants.each do |rest|
+/     .restaurant-wrap
+/       /= link_to (image_tag rest.image_url(:thumb)), rest
+/       .caption
+/         /%h3= link_to rest.name, rest
+/         /%p= rest.description
+.row
+	.large-12.columns
+		.large-9.columns
+			%h2 Food Near You
+		.large-3.columns
+			%br
+			%p= link_to 'Add New Restaurant', new_restaurant_path, class: "small button right" 
+		= render @restaurants
